@@ -56,7 +56,7 @@ if ( ! class_exists( 'CTCC_Public' ) ) { // Don't initialise if there's already 
 				$ctcc_options_settings = get_option ( 'ctcc_options_settings' );
 				$options = get_option ( 'ctcc_styles_settings' );
 				if ( isset ( $options['enqueue_styles'] ) ) {
-					wp_enqueue_style ( 'cookie-consent-style', CTCC_PLUGIN_URL . 'assets/css/style.css', '2.3.0' );
+					wp_enqueue_style ( 'cookie-consent-style', CTCC_PLUGIN_URL . 'assets/css/style.css', array(), '2.3.0' );
 				}
 				wp_enqueue_script ( 'cookie-consent', CTCC_PLUGIN_URL . 'assets/js/uk-cookie-consent-js.js', array ( 'jquery' ), '2.3.0', true );
 				wp_localize_script (
